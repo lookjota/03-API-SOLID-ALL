@@ -1,0 +1,36 @@
+### 03-API-SOLID
+
+
+## documentation
+
+# start
+
+$ npm init -y
+
+- Criando folders
+
+! src/server. 
+
+- install extensoes
+ - typescript
+ - @types/node
+ - tsx = biblioteca que executa o codigo de ts para js
+ - tsup = para criar a versao de Build da app 
+
+$ npm i typescript @types/node -D
+
+
+
+- criar arquivo tsconfig.json
+
+$ npx tsc --init
+
+@tsconfig.json
+ $ "target": "es2020"
+ 
+- Criando arquivos
+! src/app.ts 
+
+- install fastify
+
+$ npm i fastify
