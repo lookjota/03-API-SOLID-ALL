@@ -1,9 +1,12 @@
     
- ### start project
+### start project
    $ npm run start:dev
 
 ### start build
   $ npm run build 
+
+### start para producao
+  $ 
 
 
 # App
@@ -41,3 +44,12 @@ GymPass style app.
 - [ ] Os dados da aplicação precisam estar persistidos em um banco PostgreSQL;
 - [ ] Todas listas de dados precisam estar paginadas com 20 itens por página;
 - [ ] O usuário deve ser identificado por um JWT (JSON Web Token);
+
+
+
+#### Passo a passo
+
+### fixando versoes de dependencias
+.npmrc
+
+### carregando variaveis ambiente
