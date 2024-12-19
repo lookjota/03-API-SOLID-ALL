@@ -8,6 +8,39 @@
 ### start para producao
   $ 
 
+### docker config
+
+  $ docker run --name api-solid-pg -e POSTGRESQL_USERNAME=docker -e POSTGRESQL_PASSWORD=docker -e POSTGRESQL_DATABASE=apisolid -p 5432:5432 bitnami/postgresql
+
+- mostrar container rodando
+  $ docker ps
+
+- mostra todos os container ja criados
+  $ docker ps -a
+
+- start project
+  $ docker start api-solid-pg
+
+- stop project
+  $ docker stop api-solid-pg
+
+- deletar um container
+  $ docker rm api-solid-pg
+
+- mostrar os logs do seu container
+  $ docker logs api-solid-pg
+
+- mostrar e manter seguindo os logs
+  $ docker logs  api-solid-pg -f
+
+
+
+### atualiza o banco de dados
+  $ npx prisma migrate dev
+
+- interface grafica do banco de dados prisma studio
+- para navegar pelas tabelas de banco de dados 
+  $ npx prisma studio
 
 # App
 
