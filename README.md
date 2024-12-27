@@ -53,6 +53,9 @@
 - para navegar pelas tabelas de banco de dados 
   $ npx prisma studio
 
+### 
+  $ npx prisma migrate deploy
+
 # App
 
 GymPass style app.
