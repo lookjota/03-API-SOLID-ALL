@@ -53,11 +53,11 @@
 - para navegar pelas tabelas de banco de dados 
   $ npx prisma studio
 
-### 
+### pega as migration ja criadas e roda elas 
   $ npx prisma migrate deploy
 
-# App
 
+# App
 GymPass style app.
 
 
