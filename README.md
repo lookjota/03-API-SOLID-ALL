@@ -79,7 +79,7 @@ GymPass style app.
 - [ ] Deve ser possível o usuário obter o seu histórico de check-ins;
 - [ ] Deve ser possível o usuário buscar academias próximas;
 - [ ] Deve ser possível o usuário buscar academias pelo nome;
-- [ ] Deve ser possível o usuário realizar check-in em uma academia;
+- [x] Deve ser possível o usuário realizar check-in em uma academia;
 - [ ] Deve ser possível validar o check-in de um usuário;
 - [ ] Deve ser possível cadastrar uma academia;
 
@@ -109,3 +109,23 @@ GymPass style app.
 .npmrc
 
 ### carregando variaveis ambiente
+
+
+
+
+#### TDD & Mocking
+
+TDD (Test Driven Development) eh uma abordagem de desnvoolvimento de 
+software em que os testes sao escritos antes do codigo.
+TDD aplicado no desenvolvimento da funcionalidade que valida se um usuario ja realizou check-in no mesmo dia.
+Primeiramente sera criado o teste unitaio e em seguida, o codigo sera desenvolvido para que esse teste passe
+
+red, green and Refactor:
+
+Red: Escreve um test que deve falhar, ou seja, ele garante que o teste nao passra sem implementar o codigo necessario
+
+Green: Escreve a quatidade minima de codigo necessaria para fazer o teste passar.
+
+Refactor: apos o teste passar, o desenvolvedor refatora o codigo para melhorar a qualidade, sem alterar seu comportamento
+
+- Mocking trata de datas
