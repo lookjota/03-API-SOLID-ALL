@@ -1,4 +1,82 @@
     
+###  Bibliotecas
+
+## JWT
+
+Modelo de antenticacao,
+Verificar modelo, aula anterior
+
+Vamos implementar a parte de autenticacao na aplicacao 
+
+eh um modelo de autenticacao utilizado principalmente, 
+em 99% dos casos de uso, para as rotas http
+
+ou seja quando eu tenho por ex uma aplicacao front-end
+e quer se comunicar com o meu back-end.
+Se eu tenho algum outro tipo de comunicacao com a minha aplicacao
+ex:
+  Eu quero integrar a minha apliacacao com uma aplicacao externa
+  - aplicacao de um terceiro
+  <> Nesse caso o JwT nao seja melhor opcao </>
+
+  Exitem varios metodos de autenticacao
+  temos:
+   - Api token 
+   - api oauth
+
+- JWT vamos usa-lo somente para rotas da nossa aplicacao 
+- sao a rotas que vamos expor para o front-end consumir
+- Essa parte de Token de JWT, ela vai estar toda exclusiva, dentro da camada http
+da nossa aplicacao, ou seja
+ Dentro da parte dos controlers
+- Nao vou ter nada relacionado a autenticacao, dentro dos caso de uso 
+- pq os casos de uso sao as funcionalidades mais puras da nossa aplicacao
+- desconectadas do seu meio externo 
+por ex:
+  - o caso de uso de criacao de uma academia create-gym.ts
+  - nao faz sentido ele ter informacoes ou ele determinar ou estar ligado
+  especificamente a uma forma de ele criar academias
+  - Nao interessa pro caso de uso se a academia esta sendo criada, atravez do front-end
+  ou do aplicativo mobile,
+  ou integracao com o sistema de academia 
+  ou integracao com o sistema da prefeitura
+  ou quando uma academia eh registrada no cnpj, cria uma academia no nossso sistema
+  - O Caso de uso esta desconectado do mundo externo
+  - o caso de uso eh funcionalidade pura, 
+  - eh o requisito, eh a regra de negocio
+  Por isso tudo que for do meio externo, 
+  que sao restricoes para que esse caso de uso seja chamado, seja acessivel
+  sempre vai ficar nas camadas mais externas 
+  - nao vamos colocar criacao, de jwt ou qualquer coisa assim
+  - dentro do caso de uso
+  pq se um dia ele for utilizado fora do contexto, de http de uma rota do front end,
+  o jwt ali ficara inutil, nao ira servir pra nada, ou ate vai atrabalhar
+
+  - toda a parte HTTP vai ficar na parte JWT da applicacao 
+  - como estamos usando o fastify
+  - tem um modulo que eh o fastify JWT
+
+  ### Fastify JWT
+  - integra toda a parte de geracao de token do JWT de uma maneira muito simples pra gente
+
+  <Install>
+  $ npm i @fastify/jwt
+
+  - para configurar ele vamos configruar app.ts
+  $
+  app.ts
+  export const app = fastify()
+  app.register(fastifyJwt)
+
+## jwtVerify() - uma function
+  - Essa funcao faz duas coisas
+  1- Buscar o token dentro dos cabecalhos
+  2- vai validar se esso token realmente foi gerado 
+
+
+    
+
+
 ### start project
    $ npm run start:dev
 
