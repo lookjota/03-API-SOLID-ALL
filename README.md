@@ -1,6 +1,59 @@
     
 ###  Bibliotecas
 
+
+### Test Environment
+
+- testes end to end e2e
+- isolado
+- minima ou ate zero de interferencia de outros testes
+que executaram antes dele
+  ex: 
+    um teste que criou um usuario, nao pode afetar um outro teste
+- o usuario que criamos no primeiro teste nao pode aparecer no proximo teste
+
+- esse processo de ter um banco limpo a cada teste executado eh mais penoso
+- comecamos a ter q colocar na balanca ate onde isso vai ser proveitoso pra gente ou nao 
+
+- precisamos fazer escolhas de performance e efetividade
+- quando criamos um arquivo e dentro desse arquivos, temos varios testes 
+- temos uma swtich de testes separados das demais
+
+- se ao inves de criar um ambiente isolado para cada um desses testes
+- eu criar na verdade um ambiente isolado no meu banco de dados para cada
+swtich de testes
+- com isso temos mais performance e podemos evitar que algo que eu criei dentro do teste
+atrapalhe outro teste
+
+- dentro do vitest tem varias formas de criarmos testes 
+
+# test Environment
+  - o teste Environment eh basicamente uma configuracao, de ambiente para alguns tipos
+  de terstes especifico  
+
+  - podemos configurar as variaveis ambiente, para apenas arquivos de testes especificos
+ex: todos os testes que estiverem dentro desta pasta, eu quero que usem esse Environment
+ - dentro desse ambiente podemos configurar umas coisas 
+ ex: executar migrates do banco dde ddados 
+
+
+- o vitest por ser uma ferramenta nova
+ele ainda nao tem opcao para criar environments dentro do nosso projeto
+
+- agente so pode utilizar um environment diferente se agente criar um pacote
+npm que tenha o nome vitest-environment - alguma coisa
+
+## com esse comando vamos criar para esse package
+como se fosse um repositorio de pacotes local nessa maquina
+C:\Users\lookj\Documents\Project\Nodejs\store\03-API-SOLID-ALL\prisma\vitest-environment-prisma>
+$ npm link
+
+- agora conseguir voltar na nossa aplicacao instalar esse package
+que eu criei o link na minha aplicacao global
+
+C:\Users\lookj\Documents\Project\Nodejs\store\03-API-SOLID-ALL\
+$ npm link vitest-environment-prisma
+
 ## JWT
 
 Modelo de antenticacao,
