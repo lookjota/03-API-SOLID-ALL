@@ -197,6 +197,11 @@ por ex:
   $ npx prisma migrate deploy
 
 
+### install dependencies supertest 
+
+  $ npm i supertest -D
+  $ npm i @types/supertest -D
+
 # App
 GymPass style app.
 
