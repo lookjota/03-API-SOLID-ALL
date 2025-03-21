@@ -27,6 +27,7 @@ describe('Fetch User Check-in History Use Case', () => {
       page: 1,
     })
 
+    // The second page of results contains the last 2 check-ins (21st and 22nd) due to pagination logic.
     expect(checkIns).toHaveLength(2)
     expect(checkIns).toEqual([
       expect.objectContaining({ gym_Id: 'gym-01' }),
