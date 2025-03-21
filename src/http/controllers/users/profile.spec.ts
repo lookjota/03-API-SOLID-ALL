@@ -37,6 +37,5 @@ describe('Profile (e2e)', () => {
         email:'johndoe@example.com',
       })
     )
-    
     })
   })
